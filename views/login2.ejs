@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="signup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body { 
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://assets.website-files.com/5661de094faab4b202ad12f2/5852de4b99affdc361f41834_bg%20anim%2036.gif);
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+        .container{
+            width:fit-content;
+           border: solid 1px;
+           display:flex;
+           flex-direction: column;
+           width:100em;
+           justify-content: center;
+           align-items: center;
+        }
+        button{
+            
+           border-radius: 50px;
+          width:21em;
+          height:5em;
+          margin-bottom:10em;
+          background-color: rgb(36, 235, 235);
+          transition:0.5s
+        }
+        button:hover{
+            
+            border-radius: 50px;
+           width:21em;
+           height:5em;
+           margin-bottom:10em;
+           background-color: rgb(139, 36, 235);
+           
+         }
+        input{
+            border-radius: 50px;
+            height:5em;
+            width: 20em;
+            transition:0.5s
+        }
+        input:hover{
+            border-radius: 50px;
+            height:5em;
+            width: 20em;
+            transition:0.5s;
+            background-color: rgb(201, 152, 250);
+        }
+        h2{
+            margin-left:80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+    <h1>login</h1>
+    <form method=post action="/login">
+        <input type="text" name="username">username</input>
+        <br>
+        <input type="password" name="password">password</input>
+        <button>submit</button>
+        <br>login</br><br>
+        Not A User ? <a href="/signup">Create a new account</a>
+    </form>
+    </div> -->
+    <div class="container">
+        <h1>Log In</h1>
+        <form method=post action="/login2">
+            <h2>username:-</h2>
+           
+            <input type="text" name="username"></input>
+            <h2>password:-</h2>
+            <input type="password" name="password"></input>
+            <br>
+            <br>
+            <br><br>
+            <button>submit</button>
+            <br>
+            
+        </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <style>
+        body{
+           /* background-color:antiquewhite; */
+           background-image: url(https://th.bing.com/th/id/R.4a00ea47a71de9d74b3fb10e7ce41217?rik=f0%2fwP584LRB%2bqA&riu=http%3a%2f%2fwww.macmillandictionaryblog.com%2fwp-content%2fuploads%2f2018%2f10%2fdaylight-810x540.jpg&ehk=jCt6UIl9k4eNY0Frhme2ZVwjPSKHmsnLZJ86DbyXKFk%3d&risl=&pid=ImgRaw&r=0);
+            font-family: 'Mochiy Pop One', sans-serif;
+            display: flex;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-size:cover;
+            
+        }
+        /* body form{
+           
+           width:50em;
+            border: 4px solid;
+            display:flex;
+            flex-direction:column;
+           
+        } */
+        .content{
+            display:flex;
+            justify-content: center;
+
+        }
+        h1{
+            display:flex;
+            justify-content: center;
+        }
+        form input{
+           
+            font-family: 'Mochiy Pop One', sans-serif;
+            transition:1s;
+        }
+        form input:hover{
+            background-color: rgb(218, 231, 102);
+           
+            font-family: 'Mochiy Pop One', sans-serif;
+        }
+        form button{
+            
+            font-family: 'Mochiy Pop One', sans-serif;
+            transition:0.5s;
+            background-color: rgb(17, 185, 236);
+        }
+        form button:hover{
+            
+            font-family: 'Mochiy Pop One', sans-serif;
+            background-color: rgb(218, 231, 102);
+           
+        }
+    </style>
+
+<%layout('./layouts/boilerplate.ejs')%>
+    <h1>ADD A NEW CAMP</h1>
+    <div class="content">
+    <form style="  width:50em;
+    border: 4px solid;
+    display:flex;
+    flex-direction:column;
+   " method="post" action="/addcampDb">
+        &nbsp; city:<input type="text"  name="city">
+        <br>
+        &nbsp;
+        growth_from_2000_to_2013:<input type="text" name="growth_from_2000_to_2013">
+        <br>
+        &nbsp;
+        latitude:<input type="number" name="latitude">
+        <br>
+        &nbsp;
+        longitude:<input type="number" name="longitude">
+        <br>
+        &nbsp;
+        population:<input type="text" name="population">
+        <br>
+        &nbsp;
+        rank:<input type="text" name="rank">
+        <br>
+        &nbsp;
+        state:<input type="text" name="state">
+        <br>
+
+        <button style=" ">submit</button>
+    </form>
+</div>

@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body> -->
+    <h1 style=" color:white; padding-left: 20px;">Logged in as <%=arr[0]%></h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color:black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: sticky;
+            font-family: 'Mochiy Pop One', sans-serif;
+        }
+        img{
+            border:5px solid rgb(54, 155, 214);
+            border-radius: 10px;
+            opacity: 1;
+            transition: 1s;
+           
+        }
+        img:hover{
+            border:20px solid rgba(231, 255, 19, 0.952);
+            border-radius: 10px;
+            opacity: 1;
+        }
+        .card {
+           
+           background-color: rgba(0, 0, 0, 1);
+           display: flex;
+           flex-direction: column;
+       
+     
+}
+   </style>
+    <%layout('./layouts/boilerplate.ejs')%>
+    
+   
+    <br>
+   <div class="filter">
+      
+   </div>
+   <form action="/findLocation/<%=arr[0]%>"class="d-flex">
+    <input name="latitude" class="form-control me-2" type="search" placeholder="Latitude" aria-label="Latitude">
+    <input name="longitude" class="form-control me-2" type="search" placeholder="Longitude" aria-label="Latitude">
+    <button style="color:white" class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+  &nbsp;
+&nbsp;
+    <div class="card">
+    
+    <div style="display:flex; flex-direction:column; justify-content:center; align-items:center">
+        <%for(let i of arr[1]){%>
+            <div style="flex-direction:column;align-items:center;justify-content:center">
+                <a href="/details/<%=i._id%>/<%=arr[0]%>"><img style="transition:1s;" src="https://source.unsplash.com/700x400/?nature,<%=i.city%>"></a>
+                <br>
+                <div > 
+                    <a style="width:44em; border-radius:10px" class="btn btn-primary"  href="/details/<%=i._id%>/<%=arr[0]%>" role="button"><%=i.city%></a>
+                   
+                </div></div>
+                <br>
+                <br>
+                <br>
+                <br>
+            <%}%>
+        </div>
+    </div>
+   
+<!-- </body>
+</html> -->
